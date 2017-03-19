@@ -4,7 +4,7 @@
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/Oire/base64/blob/master/LICENSE)
 
 Encodes data to Base64 URL-safe way and decodes encoded data.  
-**Note**: This package requires PHP 7.0 or above.
+**Note**: This package requires PHP 7.1 or above.
 
 ```php
 use \Oire\Base64;
