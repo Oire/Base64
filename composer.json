@@ -1,0 +1,35 @@
+{
+	"name":         "oire/base64",
+	"description":  "URL-and filename-safe Base64 handling.",
+	"keywords": [
+		"base64",
+		"encoding",
+		"decoding",
+		"url-safe",
+		"single-file"
+	],
+	"license":      "MIT",
+	"type":         "library",
+	"authors": [
+		{
+			"name":     "Andre Polykanine also known as Menelion Elensúlë",
+			"homepage": "https://github.com/Oire",
+			"role":     "Developer"
+		}
+	],
+	"support": {
+		"issues":   "https://github.com/Oire/base64/issues",
+		"source":   "https://github.com/Oire/base64"
+	},
+	"autoload": {
+		"files": [
+			"src/base64.php"
+		]
+	},
+	"require": {
+		"php": ">= 7.1",
+	},
+	"require-dev": {
+		"phpunit/phpunit": "^6.0"
+	}
+}
