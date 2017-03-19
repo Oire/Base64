@@ -1,6 +1,7 @@
 # URL-safe Base64 Handling
 
 Encodes data to Base64 URL-safe way and decodes encoded data.  
+**Note**: This package requires PHP 7.0 or above.
 
 ```php
 use \Oire\Base64;
