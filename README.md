@@ -30,9 +30,12 @@ This will output:
 `The quick brown fox jumps over the lazy dog`
 
 ## Installing
-Via [Composer](https://getcomposer.org/):  
+Via [Composer](https://getcomposer.org/):
+
 `composer require oire/base64`
-or manually:  
+
+or manually:
+
 `require_once("oire/base64.php");`
 
 ## Running Tests
