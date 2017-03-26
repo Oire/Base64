@@ -20,32 +20,39 @@ class Base64Test extends TestCase {
 	}
 
 	public function testDataEquality() {
-		$this->assertEquals(Base64::decode(Base64::encode($this->text)), $this->text);
+		$this->assertSame(Base64::decode(Base64::encode($this->text)), $this->text);
 	}
 
 	public function testEncodingValidity() {
-		$this->assertEquals(Base64::encode($this->text), $this->paddinglessEncodedText);
+		$this->assertSame(Base64::encode($this->text), $this->paddinglessEncodedText);
 	}
 
 	public function testUrlSafeness() {
-		$this->assertNotEquals(Base64::encode($this->text, true), $this->encodedText);
-		$this->assertEquals(Base64::encode($this->text, true), $this->urlSafeEncodedText);
+		$this->assertNotSame(Base64::encode($this->text, true), $this->encodedText);
+		$this->assertSame(Base64::encode($this->text, true), $this->urlSafeEncodedText);
 	}
 
 	public function testPadding() {
-		$this->assertNotEquals(Base64::encode($this->text), $this->urlSafeEncodedText);
-		$this->assertEquals(Base64::encode($this->text, true), $this->urlSafeEncodedText);
+		$this->assertNotSame(Base64::encode($this->text), $this->urlSafeEncodedText);
+		$this->assertSame(Base64::encode($this->text, true), $this->urlSafeEncodedText);
 	}
 
 	/**
-	 * @expectedException InvalidArgumentException
+	 * @expectedException \InvalidArgumentException
 	*/
-	public function testException() {
+	public function testInvalidArgumentException() {
 		Base64::decode([1, 2, 3]);
 		Base64::decode(42);
 		Base64::decode(new Datetime());
 	}
 
+	/**
+	 * @expectedException \Exception
+	*/
+	function testNonBase64Alphabet() {
+		Base64::decode(random_bytes(32));
+	}
+	
 	public function testEmpty() {
 		$this->assertEmpty(Base64::encode(""));
 		$this->assertEmpty(Base64::decode(""));

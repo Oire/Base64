@@ -46,7 +46,7 @@ class Base64 {
 	*/
 	public static function encode($data, $replaceEquals = false) {
 		if (empty($data)) {
-			return '';
+			return "";
 		}
 		$b64 = base64_encode($data);
 		if ($b64) {
@@ -69,12 +69,12 @@ class Base64 {
 			throw new \InvalidArgumentException("The base64-encoded data must be a string.");
 		}
 		if (empty($data)) {
-			return '';
+			return "";
 		}
-		$res = base64_decode(strtr($data, self::WITH, self::WHAT));
-		if (!$res) {
+		$res = base64_decode(strtr($data, self::WITH, self::WHAT), true);
+		if ($res === false) {
 			throw new \Exception("Base64 decoding failed.");
-			return '';
+			return "";
 		} else {
 			return $res;
 		}
