@@ -9,15 +9,26 @@ Encodes data to Base64 URL-safe way and decodes encoded data.
 ```php
 use \Oire\Base64;
 $text = "The quick brown fox jumps over the lazy dog";
-echo Base64::encode($text).PHP_EOL;
+try {
+	$encoded = Base64::encode($text);
+} catch(Exception $e) {
+	// Handle errors
+}
+echo $encoded.PHP_EOL;
 ```
 
 This will output:  
-`VGhlIHF1aWNrIGJyb3duIGZveCBqdW1wcyBvdmVyIHRoZSBsYXp5IGRvZw`  
+`VGhlIHF1aWNrIGJyb3duIGZveCBqdW1wcyBvdmVyIHRoZSBsYXp5IGRvZw`
+
 By default, the `encode()` method truncates padding `=` signs as PHP’s built-in decoder handles this correctly. However, if the second parameter is given and set to `true`, `=` signs will be replaced with tildes (`~`), i.e.:
 
 ```php
-echo Base64::encode($text, true).PHP_EOL;
+try {
+	$encoded = Base64::encode($text, true);
+} catch(Exception $e) {
+	// Handle errors
+}
+echo $encoded.PHP_EOL;
 ````
 
 This will output:  
@@ -27,7 +38,12 @@ To decode the data, simply call `decode()`:
 
 ```php
 $encoded = "VGhlIHF1aWNrIGJyb3duIGZveCBqdW1wcyBvdmVyIHRoZSBsYXp5IGRvZw";
-echo Base64::decode($encoded).PHP_EOL;
+try {
+	$decoded = Base64::decode($encoded);
+} catch(Exception $e) {
+	// Handle errors
+}
+echo $decoded.PHP_EOL;
 ```
 
 This will output:  
