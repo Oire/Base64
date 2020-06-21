@@ -1,35 +1,50 @@
 {
-	"name":         "oire/base64",
-	"description":  "URL-and filename-safe Base64 handling.",
-	"keywords": [
-		"base64",
-		"encoding",
-		"decoding",
-		"url-safe",
-		"single-file"
-	],
-	"license":      "MIT",
-	"type":         "library",
-	"authors": [
-		{
-			"name":     "Andre Polykanine also known as Menelion Elensúlë",
-			"homepage": "https://github.com/Oire",
-			"role":     "Developer"
-		}
-	],
-	"support": {
-		"issues":   "https://github.com/Oire/base64/issues",
-		"source":   "https://github.com/Oire/base64"
-	},
-	"autoload": {
-		"files": [
-			"src/base64.php"
-		]
-	},
-	"require": {
-		"php": ">= 7.1"
-	},
-	"require-dev": {
-		"phpunit/phpunit": "^6.0 || ^7.0"
-	}
+    "name": "oire/base64",
+    "description": "Url-and filename-safe Base64 handling.",
+    "type": "library",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/Oire/php-code-style"
+        }
+    ],
+    "require": {
+        "php": ">=7.1"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.16",
+        "phpunit/phpunit": "^9",
+        "oire/php-code-style": "dev-master",
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andre Polykanine also known as Menelion Elensúlë",
+            "email": "ap@oire.me",
+            "homepage": "https://github.com/Menelion",
+            "role": "developer"
+        }
+    ],
+    "support": {
+        "issues":   "https://github.com/Oire/Base64/issues",
+        "source":   "https://github.com/Oire/Base64"
+    },
+    "autoload": {
+        "psr-4": {
+            "Oire\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Oire\\Tests\\": "tests"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "scripts": {
+        "tests": "vendor/bin/phpunit",
+        "coding-style": "vendor/bin/php-cs-fixer fix --dry-run --diff --config=.php_cs.dist",
+        "clear": "rm -rf vendor/"
+    }
 }

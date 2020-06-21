@@ -1,61 +1,50 @@
 <?php
+namespace Oire\Tests;
+
 use Oire\Base64;
+use Oire\Exception\Base64Exception;
 use PHPUnit\Framework\TestCase;
 
-/**
- @requires php 7.1
-*/
+class Base64Test extends TestCase
+{
+    private const RAW_DATA = 'The quick brown fox jumps over the lazy dog';
+    private const ENCODED_DATA = 'VGhlIHF1aWNrIGJyb3duIGZveCBqdW1wcyBvdmVyIHRoZSBsYXp5IGRvZw==';
+    private const URL_SAFE_ENCODED_DATA = 'VGhlIHF1aWNrIGJyb3duIGZveCBqdW1wcyBvdmVyIHRoZSBsYXp5IGRvZw~~';
+    private const PADDINGLESS_ENCODED_DATA = 'VGhlIHF1aWNrIGJyb3duIGZveCBqdW1wcyBvdmVyIHRoZSBsYXp5IGRvZw';
 
-class Base64Test extends TestCase {
-	protected $text;
-	protected $encodedText;
-	protected $urlSafeEncodedText;
-	protected $paddinglessEncodedText;
+    public function testDataEquality(): void
+    {
+        self::assertSame(Base64::decode(Base64::encode(self::RAW_DATA)), self::RAW_DATA);
+    }
 
-	protected function setUp() {
-		$this->text = "The quick brown fox jumps over the lazy dog";
-		$this->encodedText = "VGhlIHF1aWNrIGJyb3duIGZveCBqdW1wcyBvdmVyIHRoZSBsYXp5IGRvZw==";
-		$this->urlSafeEncodedText = "VGhlIHF1aWNrIGJyb3duIGZveCBqdW1wcyBvdmVyIHRoZSBsYXp5IGRvZw~~";
-		$this->paddinglessEncodedText = "VGhlIHF1aWNrIGJyb3duIGZveCBqdW1wcyBvdmVyIHRoZSBsYXp5IGRvZw";
-	}
+    public function testEncodingValidity(): void
+    {
+        self::assertSame(Base64::encode(self::RAW_DATA), self::PADDINGLESS_ENCODED_DATA);
+    }
 
-	public function testDataEquality() {
-		$this->assertSame(Base64::decode(Base64::encode($this->text)), $this->text);
-	}
+    public function testUrlSafeness(): void
+    {
+        self::assertNotSame(Base64::encode(self::RAW_DATA, true), self::ENCODED_DATA);
+        self::assertSame(Base64::encode(self::RAW_DATA, true), self::URL_SAFE_ENCODED_DATA);
+    }
 
-	public function testEncodingValidity() {
-		$this->assertSame(Base64::encode($this->text), $this->paddinglessEncodedText);
-	}
+    public function testPadding(): void
+    {
+        self::assertNotSame(Base64::encode(self::RAW_DATA), self::URL_SAFE_ENCODED_DATA);
+        self::assertSame(Base64::encode(self::RAW_DATA, true), self::URL_SAFE_ENCODED_DATA);
+    }
 
-	public function testUrlSafeness() {
-		$this->assertNotSame(Base64::encode($this->text, true), $this->encodedText);
-		$this->assertSame(Base64::encode($this->text, true), $this->urlSafeEncodedText);
-	}
+    public function testNonBase64Alphabet(): void
+    {
+        self::expectException(Base64Exception::class);
+        self::expectExceptionMessage('Base64 decoding failed.');
 
-	public function testPadding() {
-		$this->assertNotSame(Base64::encode($this->text), $this->urlSafeEncodedText);
-		$this->assertSame(Base64::encode($this->text, true), $this->urlSafeEncodedText);
-	}
+        Base64::decode(random_bytes(32));
+    }
 
-	/**
-	 * @expectedException \InvalidArgumentException
-	*/
-	public function testInvalidArgumentException() {
-		Base64::decode([1, 2, 3]);
-		Base64::decode(42);
-		Base64::decode(new Datetime());
-	}
-
-	/**
-	 * @expectedException \Exception
-	*/
-	function testNonBase64Alphabet() {
-		Base64::decode(random_bytes(32));
-	}
-	
-	public function testEmpty() {
-		$this->assertEmpty(Base64::encode(""));
-		$this->assertEmpty(Base64::decode(""));
-	}
+    public function testEmpty(): void
+    {
+        self::assertEmpty(Base64::encode(''));
+        self::assertEmpty(Base64::decode(''));
+    }
 }
-?>
