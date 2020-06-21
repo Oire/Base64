@@ -14,7 +14,7 @@
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^2.16",
         "phpunit/phpunit": "^9",
-        "oire/php-code-style": "dev-master",
+        "oire/php-code-style": "dev-master"
     },
     "license": "MIT",
     "authors": [
