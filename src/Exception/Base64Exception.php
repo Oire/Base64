@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Oire\Exception;
+namespace Oire\Base64\Exception;
 
 use RuntimeException;
 

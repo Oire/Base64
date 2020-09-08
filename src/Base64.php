@@ -1,7 +1,7 @@
 <?php
-namespace Oire;
+namespace Oire\Base64;
 
-use Oire\Exception\Base64Exception;
+use Oire\Base64\Exception\Base64Exception;
 
 /**
  * Oirë URL-safe BASE64 handling

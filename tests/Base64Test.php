@@ -1,8 +1,8 @@
 <?php
-namespace Oire\Tests;
+namespace Oire\Base64\Tests;
 
-use Oire\Base64;
-use Oire\Exception\Base64Exception;
+use Oire\Base64\Base64;
+use Oire\Base64\Exception\Base64Exception;
 use PHPUnit\Framework\TestCase;
 
 class Base64Test extends TestCase

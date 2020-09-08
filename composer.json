@@ -9,11 +9,11 @@
         }
     ],
     "require": {
-        "php": ">=7.1"
+        "php": ">=7.3"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^2.16",
-        "phpunit/phpunit": "^7",
+        "phpunit/phpunit": "^9",
         "oire/php-code-style": "dev-master"
     },
     "license": "MIT",
@@ -31,12 +31,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Oire\\": "src"
+            "Oire\\Base64\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Oire\\Tests\\": "tests"
+            "Oire\\Base64\\Tests\\": "tests"
         }
     },
     "config": {

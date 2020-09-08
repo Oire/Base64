@@ -3,12 +3,36 @@
 [![Build Status](https://api.travis-ci.com/Oire/Base64.svg?branch=master)](https://travis-ci.com/github/Oire/Base64)
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/Oire/Base64/blob/master/LICENSE)
 
-Encodes data to Base64 URL-safe way and decodes encoded data.  
-**Note**: This package requires PHP 7.1 or above.
+Encodes data to Base64 URL-safe way and decodes encoded data.
+
+## Requirements
+
+This library requires PHP 7.3 or above.
+
+## Installation
+
+Install via [Composer](https://getcomposer.org/):
+
+```
+composer require oire/base64
+```
+
+## Running Tests
+
+Run `./vendor/bin/phpunit` in the project directory.
+
+## Compatibility with Earlier Versions of PHP
+If you want a version compatible with PHP 7.1.2, please install [version 1](https://github.com/Oire/Base64/tree/v1) instead:
+
+```shell
+composer require "oire/base64 ^1"
+```
+
+## Usage Examples
 
 ```php
-use \Oire\Base64;
-use Oire\Exception\Base64Exception;
+use Oire\Base64\Base64;
+use Oire\Base64\Exception\Base64Exception;
 
 $text = "The quick brown fox jumps over the lazy dog";
 $encoded = Base64::encode($text);
