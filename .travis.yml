@@ -11,7 +11,7 @@ matrix:
     - php: nightly
 
 install:
-  - composer install
+  - composer install --prefer-source
 
 script:
   - composer tests
