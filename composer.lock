@@ -355,16 +355,16 @@
         },
         {
             "name": "friendsofphp/php-cs-fixer",
-            "version": "v2.17.0",
+            "version": "v2.17.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfPHP/PHP-CS-Fixer.git",
-                "reference": "5274ce3d3200a2b374baa42143cb9dfcdcc2fa52"
+                "reference": "5198b7308ed63f26799387fd7f3901c3db6bd7fd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/5274ce3d3200a2b374baa42143cb9dfcdcc2fa52",
-                "reference": "5274ce3d3200a2b374baa42143cb9dfcdcc2fa52",
+                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/5198b7308ed63f26799387fd7f3901c3db6bd7fd",
+                "reference": "5198b7308ed63f26799387fd7f3901c3db6bd7fd",
                 "shasum": ""
             },
             "require": {
@@ -411,11 +411,6 @@
                 "php-cs-fixer"
             ],
             "type": "application",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.17-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "PhpCsFixer\\": "src/"
@@ -454,7 +449,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-12-07T20:43:00+00:00"
+            "time": "2020-12-08T13:47:02+00:00"
         },
         {
             "name": "myclabs/deep-copy",
@@ -568,12 +563,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Oire/php-code-style.git",
-                "reference": "9911550c111464d978dc9a9fa9dfcb3aaa77aa12"
+                "reference": "25a95778655dcab3f0e5a3fece17ddfb6dd49dfb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Oire/php-code-style/zipball/9911550c111464d978dc9a9fa9dfcb3aaa77aa12",
-                "reference": "9911550c111464d978dc9a9fa9dfcb3aaa77aa12",
+                "url": "https://api.github.com/repos/Oire/php-code-style/zipball/25a95778655dcab3f0e5a3fece17ddfb6dd49dfb",
+                "reference": "25a95778655dcab3f0e5a3fece17ddfb6dd49dfb",
                 "shasum": ""
             },
             "require": {
@@ -602,7 +597,7 @@
                 "issues": "https://github.com/Oire/php-code-style/issues",
                 "source": "https://github.com/Oire/php-code-style"
             },
-            "time": "2020-10-28T23:03:16+00:00"
+            "time": "2020-12-08T23:58:32+00:00"
         },
         {
             "name": "phar-io/manifest",
