@@ -1,6 +1,7 @@
 # Oirë Base64, URL-safe Base64 Handling
 
-[![Build Status](https://api.travis-ci.com/Oire/Base64.svg?branch=master)](https://travis-ci.com/github/Oire/Base64)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/Oire/Base64.svg?style=flat-square)](https://packagist.org/packages/Oire/Base64)
+[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/Oire/Base64/run-tests?label=tests)](https://github.com/Oire/Base64/actions?query=workflow%3Arun-tests+branch%3Amaster)
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/Oire/Base64/blob/master/LICENSE)
 
 Encodes data to Base64 URL-safe way and decodes encoded data.
