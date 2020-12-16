@@ -76,14 +76,6 @@ This will output:
 The quick brown fox jumps over the lazy dog
 ```
 
-## Installing
-Install via [Composer](https://getcomposer.org/):
-
-`composer require oire/base64`
-
-## Running Tests
-Run `./vendor/bin/phpunit` in the projects directory.
-
 ## License
 Copyright © 2017-2020, Andre Polykanine also known as Menelion Elensúlë, [The Magical Kingdom of Oirë](https://github.com/Oire/).  
 This software is licensed under an MIT license.
