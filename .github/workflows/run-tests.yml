@@ -24,9 +24,9 @@ jobs:
           php-version: ${{ matrix.php }}
           extensions: mbstring, pdo, sqlite, pdo_sqlite
           coverage: none
-          
+
       - name: Install dependencies
-        run: composer update --${{ matrix.stability }} --prefer-dist --no-interaction
+        run: composer install
 
       - name: Execute tests
         run: vendor/bin/phpunit
