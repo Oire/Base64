@@ -44,7 +44,7 @@ class Base64
     {
         $b64 = base64_encode($data);
 
-        return $replaceEquals? strtr($b64, self::EXT_WHAT, self::EXT_WITH): strtr(rtrim($b64, "="), self::WHAT, self::WITH);
+        return $replaceEquals ? strtr($b64, self::EXT_WHAT, self::EXT_WITH) : strtr(rtrim($b64, '='), self::WHAT, self::WITH);
     }
 
     /**
