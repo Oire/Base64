@@ -1,0 +1,19 @@
+parameters:
+  level: 8
+  paths:
+    - src
+    - tests
+  polluteCatchScopeWithTryAssignments: true
+  checkAlwaysTrueCheckTypeFunctionCall: true
+  checkAlwaysTrueInstanceof: true
+  checkAlwaysTrueStrictComparison: true
+  checkExplicitMixedMissingReturn: true
+  checkFunctionNameCase: true
+  checkInternalClassCaseSensitivity: true
+  checkMissingClosureNativeReturnTypehintRule: true
+  reportMaybesInMethodSignatures: true
+  reportStaticMethodSignatures: true
+  checkTooWideReturnTypesInProtectedAndPublicMethods: true
+  checkUninitializedProperties: true
+  inferPrivatePropertyTypeFromConstructor: true
+  
