@@ -13,8 +13,9 @@
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^2.16",
-        "phpunit/phpunit": "^9",
-        "oire/php-code-style": "dev-master"
+        "oire/php-code-style": "dev-master",
+        "phpstan/phpstan": "^0.12.66",
+        "phpunit/phpunit": "^9"
     },
     "license": "MIT",
     "authors": [

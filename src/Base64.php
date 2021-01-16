@@ -5,7 +5,7 @@ use Oire\Base64\Exception\Base64Exception;
 
 /**
  * Oirë URL-safe BASE64 handling
- * Copyright © 2017-2020, Andre Polykanine also known as Menelion Elensúlë, the Magical Kingdom of Oirë, https://github.com/Oire
+ * Copyright © 2017-2021, Andre Polykanine also known as Menelion Elensúlë, the Magical Kingdom of Oirë, https://github.com/Oire
  *  Portions copyright © 2016 Paragon Initiative Enterprises.
  *  Portions copyright © 2014 Steve "Sc00bz" Thomas (steve at tobtu dot com)
  *

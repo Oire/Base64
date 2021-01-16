@@ -1,7 +1,8 @@
 # Oirë Base64, URL-safe Base64 Handling
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/Oire/Base64.svg?style=flat-square)](https://packagist.org/packages/Oire/Base64)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/Oire/Base64/run-tests?label=tests)](https://github.com/Oire/Base64/actions?query=workflow%3Arun-tests+branch%3Amaster)
+[![Tests Github Action Status](https://img.shields.io/github/workflow/status/Oire/Base64/run-tests)](https://github.com/Oire/Base64/actions?query=workflow%3Arun-tests+branch%3Amaster)
+[![PHPStan Analyze Github Action Status](https://img.shields.io/github/workflow/status/Oire/Base64/phpstan-analyze?label=analysis)](https://github.com/Oire/Base64/actions?query=workflow%3Aphpstan-analyze+branch%3Amaster)
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/Oire/Base64/blob/master/LICENSE)
 
 Encodes data to Base64 URL-safe way and decodes encoded data.
@@ -77,5 +78,5 @@ The quick brown fox jumps over the lazy dog
 ```
 
 ## License
-Copyright © 2017-2020, Andre Polykanine also known as Menelion Elensúlë, [The Magical Kingdom of Oirë](https://github.com/Oire/).  
+Copyright © 2017-2021, Andre Polykanine also known as Menelion Elensúlë, [The Magical Kingdom of Oirë](https://github.com/Oire/).  
 This software is licensed under an MIT license.
