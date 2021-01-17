@@ -1,0 +1,23 @@
+name: Psalm Analyze
+
+on: [push, pull_request]
+
+jobs:
+  phpStan:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: true
+      matrix:
+        php: [8.0, 7.4, 7.3]
+        stability: [prefer-lowest, prefer-stable]
+
+    name: P${{ matrix.php }} - ${{ matrix.stability }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run Psalm
+        uses: docker://vimeo/psalm-github-actions
+        with:
+          composer_require_dev: true
