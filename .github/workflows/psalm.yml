@@ -19,3 +19,5 @@ jobs:
 
       - name: Run Psalm
         uses: docker://vimeo/psalm-github-actions
+        with:
+          composer_require_dev: true
