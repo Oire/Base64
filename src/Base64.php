@@ -51,9 +51,9 @@ class Base64
      * Decoding from URL-safe Base64.
      * @param  string          $data The data to be decoded
      * @throws Base64Exception if decoding from Base64 fails
-     * @return mixed           Returns decoded data or an empty string on failure
+     * @return string           Returns decoded data
      */
-    public static function decode(string $data)
+    public static function decode(string $data): string
     {
         $result = base64_decode(strtr($data, self::WITH, self::WHAT), true);
 
