@@ -51,7 +51,7 @@ class Base64
      * Decoding from URL-safe Base64.
      * @param  string          $data The data to be decoded
      * @throws Base64Exception if decoding from Base64 fails
-     * @return string           Returns decoded data
+     * @return string          Returns decoded data
      */
     public static function decode(string $data): string
     {
