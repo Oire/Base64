@@ -37,10 +37,10 @@ class Base64
 
     /**
      * Encoding into URL-safe Base64.
-     * @param  mixed  $data The data to be encoded
+     * @param  string  $data The data to be encoded
      * @return string The encoded data or an empty string on failure
      */
-    public static function encode($data, bool $replaceEquals = false): string
+    public static function encode(string $data, bool $replaceEquals = false): string
     {
         $b64 = base64_encode($data);
 
