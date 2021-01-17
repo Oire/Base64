@@ -37,7 +37,7 @@ class Base64
 
     /**
      * Encoding into URL-safe Base64.
-     * @param  string  $data The data to be encoded
+     * @param  string $data The data to be encoded
      * @return string The encoded data or an empty string on failure
      */
     public static function encode(string $data, bool $replaceEquals = false): string
