@@ -1,5 +1,9 @@
 # Oirë Base64, URL-safe Base64 Handling
 
+## Note! This library is not maintained anymore.
+
+Please use [Iridium security library](https://github.com/Oire/Iridium-php) instead.
+
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/Oire/Base64.svg?style=flat-square)](https://packagist.org/packages/Oire/Base64)
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/Oire/Base64/blob/master/LICENSE)
 
